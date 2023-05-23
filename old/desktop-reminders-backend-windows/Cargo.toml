@@ -1,0 +1,26 @@
+[package]
+name = "desktop-reminders-backend-windows"
+version = { workspace = true }
+edition = { workspace = true }
+publish = { workspace = true }
+
+[dependencies]
+# GUI
+egui = { workspace = true }
+egui-winit = { workspace = true }
+egui-wgpu = { workspace = true, features = ["winit"] }
+windows = { workspace = true, features = [
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Accessibility",
+] }
+
+# Futures
+futures = { workspace = true }
+
+# Errors + tracing
+tracing = { workspace = true }
+thiserror = { workspace = true }
+
+# Utility
+once_cell = { workspace = true }

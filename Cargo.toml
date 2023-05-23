@@ -1,0 +1,40 @@
+[workspace]
+resolver = "2"
+members = ["bin/*"]
+
+[workspace.dependencies]
+# GUI
+# egui = "0.21"
+# egui_extras = "0.21"
+# egui-winit = "0.21"
+# egui-wgpu = "0.21"
+iced_native = "0.10"
+iced_wgpu = "0.10"
+iced_winit = "0.9"
+iced_lazy = "0.6.1"
+iced_aw = "0.5"
+# windows = "0.44"
+
+# Async
+futures = "0.3"
+tokio = "1"
+
+# Errors
+color-eyre = "0.6"
+thiserror = "1"
+
+# Tracing
+tracing = "0.1"
+tracing-subscriber = "0.3"
+tracing-error = "0.2"
+
+# Serialization
+serde = "1"
+serde_json = "1"
+
+# Date/time
+chrono = "0.4"
+
+# Utility
+bitflags = "2"
+once_cell = "1"

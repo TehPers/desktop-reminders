@@ -1,0 +1,29 @@
+[package]
+name = "desktop-reminders"
+version = { workspace = true }
+edition = { workspace = true }
+publish = { workspace = true }
+
+[dependencies]
+# GUI
+egui = { workspace = true }
+egui_extras = { workspace = true, features = ["datepicker"] }
+desktop-reminders-backend-windows = { path = "../desktop-reminders-backend-windows" }
+desktop-reminders-core = { path = "../desktop-reminders-core" }
+
+# Futures
+futures = { workspace = true }
+
+# Errors + tracing
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+color-eyre = { workspace = true }
+
+# Serialization
+serde = { workspace = true, features = ["derive"] }
+
+# Date/Time
+chrono = { workspace = true, features = ["serde"] }
+
+# Utility
+bitflags = { workspace = true, features = ["serde"] }

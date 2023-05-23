@@ -1,0 +1,36 @@
+[package]
+name = "desktop-reminders-iced"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+# Async
+futures = { workspace = true }
+
+# Iced
+iced_native = { workspace = true }
+iced_wgpu = { workspace = true }
+iced_winit = { workspace = true }
+iced_lazy = { workspace = true }
+iced_aw = { workspace = true, features = [
+    "date_picker",
+    "floating_element",
+    "time_picker",
+] }
+
+# Serialization
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+
+# Errors
+color-eyre = { workspace = true }
+
+# Tracing
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+tracing-error = { workspace = true }
+
+# Util
+bitflags = { workspace = true, features = ["serde"] }
+chrono = { workspace = true, features = ["serde"] }

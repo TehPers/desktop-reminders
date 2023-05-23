@@ -1,0 +1,9 @@
+[package]
+name = "desktop-reminders-core"
+version = { workspace = true }
+edition = { workspace = true }
+publish = { workspace = true }
+
+[dependencies]
+# GUI
+egui = { workspace = true }

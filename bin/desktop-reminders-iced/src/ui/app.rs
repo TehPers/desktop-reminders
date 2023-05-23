@@ -116,7 +116,7 @@ impl Program for App {
                 .map(|(label, id)| Tab::new(label, id, id == self.tab)),
         )
         .on_selected(AppMessage::TabSelected);
-        let page: Element<_, _> = match self.tab {
+        let page = match self.tab {
             AppTab::Reminders => reminder_page(&self.reminders)
                 .on_toggle(AppMessage::ReminderToggled)
                 .into(),
@@ -128,7 +128,7 @@ impl Program for App {
             title.into(),
             horizontal_rule(2).into(),
             container(tabs).width(Length::Fill).into(),
-            page.into(),
+            page,
             vertical_space(Length::Fill).into(),
         ])
         .into()
